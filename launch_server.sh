@@ -1,0 +1,1 @@
+./test-launch "nvarguscamerasrc ! video/x-raw(memory:NVMM),width=1280,height=720 ! tee name=t t. ! queue ! nvoverlaysink overlay-x=50 overlay-y=50 overlay-w=1280 overlay-h=720 t. ! queue ! omxh264enc ! video/x-h264,profile=baseline ! rtph264pay name=pay0 pt=96"
